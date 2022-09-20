@@ -41,7 +41,7 @@ export default ({ watch = true } = {} as Config): Plugin => {
       if (watch) {
         const defaultPaths = [
           '../site/(templates|snippets|controllers|models|layouts)/**/*.php',
-          '../content/**',
+          '../content/**/*',
         ]
         const paths = watch === true ? defaultPaths : watch
         // @ts-ignore
