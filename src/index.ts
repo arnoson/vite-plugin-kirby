@@ -40,7 +40,7 @@ export default ({ watch = true } = {} as Config): Plugin => {
 
       if (watch) {
         const defaultPaths = [
-          '../site/(templates|snippets|controllers|models)/**/*.php',
+          '../site/(templates|snippets|controllers|models|layouts)/**/*.php',
           '../content/**',
         ]
         const paths = watch === true ? defaultPaths : watch
@@ -50,7 +50,7 @@ export default ({ watch = true } = {} as Config): Plugin => {
     },
 
     buildStart() {
-      unlink(devPath).catch((_e) => {})
+      unlink(devPath).catch((_e: Error) => {})
     },
   }
 }
