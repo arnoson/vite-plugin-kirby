@@ -16,6 +16,9 @@
     "kirby",
     "plugin"
   ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --clean --dts"
   },
