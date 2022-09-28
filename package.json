@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/arnoson/vite-plugin-kirby#readme",
   "dependencies": {
-    "vite-plugin-live-reload": "^3.0.0"
+    "vite-plugin-live-reload": "^3.0.1"
   }
 }

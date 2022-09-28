@@ -7,10 +7,10 @@ specifiers:
   tsup: ^6.2.3
   typescript: ^4.8.3
   vite: ^3.1.3
-  vite-plugin-live-reload: ^3.0.0
+  vite-plugin-live-reload: ^3.0.1
 
 dependencies:
-  vite-plugin-live-reload: 3.0.0
+  vite-plugin-live-reload: 3.0.1
 
 devDependencies:
   '@types/node': 18.7.18
@@ -2829,8 +2829,8 @@ packages:
       builtins: 1.0.3
     dev: true
 
-  /vite-plugin-live-reload/3.0.0:
-    resolution: {integrity: sha512-1ucmNc/UxiKvzudcVzgs+bTM3FHOLcso6U7kto2ujQsBoQolxAV7mMbqWtQ5jetm0hRiOvMada7QsP+IIK7+7w==}
+  /vite-plugin-live-reload/3.0.1:
+    resolution: {integrity: sha512-ERZTRHnU50R7nRfKVMCNrkSyXIcxKv87INWmPPmnOF3fcaOKFbLQ5zdO6hfPb6bl03fmENtMByfz0OiEAsFF+g==}
     dependencies:
       chokidar: 3.5.3
       picocolors: 1.0.0

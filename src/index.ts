@@ -1,7 +1,7 @@
 import type { Plugin, ViteDevServer } from 'vite'
 import { resolve } from 'node:path'
 import { writeFile, unlink } from 'node:fs/promises'
-import liveReload from 'vite-plugin-live-reload'
+import { liveReload } from 'vite-plugin-live-reload'
 
 export interface Config {
   /**
