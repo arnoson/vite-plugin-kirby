@@ -1,6 +1,7 @@
 {
   "name": "vite-plugin-kirby",
   "version": "0.1.1",
+  "packageManager": "pnpm@7.17.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -20,7 +21,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts"
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
+    "release": "pnpm build && bumpp"
   },
   "author": "arnoson",
   "repository": {
@@ -30,6 +32,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.7.18",
+    "bumpp": "^8.2.1",
     "np": "^7.6.2",
     "picocolors": "^1.0.0",
     "tsup": "^6.2.3",
