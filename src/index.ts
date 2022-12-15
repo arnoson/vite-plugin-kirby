@@ -28,14 +28,13 @@ export default ({ watch = true } = {} as Config): Plugin => {
       const { config } = server
 
       server.httpServer?.once('listening', () => {
-        const { https, port, host = 'localhost' } = config.server
-        const protocol = https ? 'https' : 'http'
+        if (!config.server.origin) {
+          const { https, port, host = 'localhost' } = config.server
+          const protocol = https ? 'https' : 'http'
+          config.server.origin = `${protocol}://${host}:${port}`
+        }
 
-        const url = `${protocol}://${host}:${port}`
-        // This is needed to server the assets from the dev server.
-        config.server.origin ??= url
-
-        writeFile(devPath, `VITE_SERVER=${url}`)
+        writeFile(devPath, `VITE_SERVER=${config.server.origin}`)
       })
 
       if (watch) {
