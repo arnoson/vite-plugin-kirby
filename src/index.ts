@@ -33,7 +33,7 @@ export default ({ watch = true } = {} as Config): Plugin => {
 
         const url = `${protocol}://${host}:${port}`
         // This is needed to server the assets from the dev server.
-        config.server.origin = url
+        config.server.origin ??= url
 
         writeFile(devPath, `VITE_SERVER=${url}`)
       })
