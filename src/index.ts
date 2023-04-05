@@ -9,13 +9,19 @@ export interface Config {
    * be watched and cause a reload. Either enable/disable it or provide your own
    * paths to watch.
    * @see https://github.com/arnoson/vite-plugin-live-reload
+   * @default true
    */
+  watch?: boolean | string[],
 
-  watch: boolean | string[]
+  /**
+   * The directory the `.dev` file is placed.
+   * @default process.cwd()
+   */
+  devDir?: string
 }
 
-export default ({ watch = true } = {} as Config): Plugin => {
-  const devPath = resolve(process.cwd(), '.dev')
+export default ({ watch = true, devDir = process.cwd() } = {} as Config): Plugin => {
+  const devPath = resolve(devDir, '.dev')
 
   return {
     name: 'vite-plugin-kirby',

@@ -46,3 +46,24 @@ export default {
   ]
 }
 ```
+
+### Config
+
+```ts
+kirby({
+  /**
+   * Wether templates, snippets, controllers, models and content changes should
+   * be watched and cause a reload. Either enable/disable it or provide your own
+   * paths to watch.
+   * @see https://github.com/arnoson/vite-plugin-live-reload
+   * @default true
+   */
+  watch?: boolean | string[];
+
+  /**
+   * The directory in which the `.dev` file is placed.
+   * @default process.cwd()
+   */
+  devDir?: string;
+})
+```
