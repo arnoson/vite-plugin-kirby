@@ -36,8 +36,9 @@ export default ({ watch = true, devDir = process.cwd() } = {} as Config): Plugin
       server.httpServer?.once('listening', () => {
         if (!config.server.origin) {
           const { https, port, host = 'localhost' } = config.server
+          const resolvedHost = host === true ? '0.0.0.0' : host
           const protocol = https ? 'https' : 'http'
-          config.server.origin = `${protocol}://${host}:${port}`
+          config.server.origin = `${protocol}://${resolvedHost}:${port}`
         }
 
         writeFile(devPath, `VITE_SERVER=${config.server.origin}`)
