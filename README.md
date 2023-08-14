@@ -1,5 +1,5 @@
 > [!NOTE]
-> This repository has moved to [kirby-vite]([url](https://github.com/arnoson/kirby-vite/tree/main/packages/vite-plugin-kirby))
+> This repository has moved to [kirby-vite](https://github.com/arnoson/kirby-vite/tree/main/packages/vite-plugin-kirby)
 
 # Vite Plugin Kirby
 
