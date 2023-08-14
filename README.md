@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository has moved to [kirby-vite]([url](https://github.com/arnoson/kirby-vite/tree/main/packages/vite-plugin-kirby))
+
 # Vite Plugin Kirby
 
 A plugin for using [Vite](https://github.com/vitejs/vite) with [Kirby](https://github.com/getkirby/kirby).
